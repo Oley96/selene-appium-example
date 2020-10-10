@@ -1,12 +1,10 @@
-from selene import by
-from selene.support.shared.jquery_style import s
+from screens.main_screen import MainScreen
 
 
-def test_appium_open_app(mobile_driver):
+def test_should_add_comment(mobile_driver):
     comment = "Allure Rules!!!"
 
-    s(by.id("comments")).click()
-    s(by.id("comments")).set_value(comment)
-    s(by.id("h1Text")).click()
-    s(by.id("submit")).click()
-    s(by.id("submittedComments")).click()
+    MainScreen().tap_and_type_text_to_comment_input(comment)
+    MainScreen().tap_to_header()
+    MainScreen().tap_submit_button()
+    MainScreen().verify_comment_adding(comment)
