@@ -9,7 +9,7 @@ import dotenv
 # dotenv.load_dotenv()
 
 def pytest_addoption(parser):
-    parser.addoption("--platform", action="store", default="IOS")
+    parser.addoption("--platform", action="store", default="ios")
 
 
 @pytest.fixture
