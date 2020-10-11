@@ -7,8 +7,8 @@ Preferences -> Tools -> Default test runner -> pytest
 3. Appium + carthage
 
 ## Don't forget to check diagnostic via appium doctor
-Run in terminal: npm install appium-doctor -g
-Check diagnostic for necessary dependencies by running in terminal:
+1. Run in terminal: npm install appium-doctor -g
+2. Check diagnostic for necessary dependencies by running in terminal:
 appium-doctor --ios
 
 
