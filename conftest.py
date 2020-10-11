@@ -16,7 +16,7 @@ def mobile_driver():
         'platformName': "IOS",
         'platformVersion': os.getenv('platform.version'),
         'deviceName': os.getenv('device.name'),
-        'deviceOrientation': os.getenv('device.orientation'),
+        'orientation': os.getenv('device.orientation'),
         'app': os.getenv('app.location'),
     }
 

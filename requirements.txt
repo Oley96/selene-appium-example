@@ -1,3 +1,4 @@
 Appium-Python-Client==1.0.2
 pytest==6.1.1
 selene==2.0.0a33
+python-dotenv==0.14.0
