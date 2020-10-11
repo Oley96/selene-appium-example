@@ -13,8 +13,9 @@ appium-doctor --ios
 
 
 ## How to start?
-1. Create .env file in root directory
-2. Copy content form .env.example to .env file
-3. Install requirements
-4. Start Appium
-5. Run in terminal: pytest ./tests
+1. Clone repo
+2. Create .env file in root directory
+3. Copy content form .env.example to .env file
+4. Install requirements: pip install -r requirements.txt
+5. Start Appium
+6. Run in terminal: pytest ./tests
