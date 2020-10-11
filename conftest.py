@@ -1,6 +1,11 @@
+import os
+
 import pytest
 from selene.api import config
 from appium import webdriver
+import dotenv
+
+dotenv.load_dotenv()
 
 
 @pytest.fixture
@@ -8,14 +13,14 @@ def mobile_driver():
     config.timeout = 10
 
     desired_caps = {
-        'platformName': 'iOS',
-        'platformVersion': '12.2',
-        'deviceName': 'iPhone X',
-        'deviceOrientation': 'PORTRAIT',
-        'app': "https://github.com/saucelabs-training/demo-java/blob/master/appium-example/resources/ios/SauceGuineaPig-sim-debug.app.zip?raw=true"
+        'platformName': "IOS",
+        'platformVersion': os.getenv('platform.version'),
+        'deviceName': os.getenv('device.name'),
+        'deviceOrientation': os.getenv('device.orientation'),
+        'app': os.getenv('app.location'),
     }
 
-    driver = webdriver.Remote(command_executor="http://localhost:4723/wd/hub",
+    driver = webdriver.Remote(command_executor=os.getenv('remote.url'),
                               desired_capabilities=desired_caps)
     config.driver = driver
 

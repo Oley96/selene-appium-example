@@ -10,7 +10,6 @@ class MainScreen:
         self.comment_input = s(by.id("comments"))
         self.submit_button = s(by.id("submit"))
 
-
     def tap_and_type_text_to_comment_input(self, comment):
         self.comment_input.click()
         self.comment_input.type(comment)
@@ -23,5 +22,3 @@ class MainScreen:
 
     def verify_comment_adding(self, comment):
         self.comment_text.should(have.text(comment))
-
-
